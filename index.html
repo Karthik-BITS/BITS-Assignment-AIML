@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Web Page</title>
+	<style>
+		iframe {
+			width: 100%;
+			height: 500px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<img src="/logo.png">
+	<h1>AI/ML Assignment</h1>
+	<a href="#" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_Logistic.ipynb')">Click here to view the Logistic Regression Algorithm Performance</a>
+	<a href="#" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_RandomForest.ipynb')">Click here to view the Random Forest Algorithm Performance</a>
+	<iframe id="myiframe" src=""></iframe>
+
+	<script>
+		function changeFrameSource(src) {
+			document.getElementById('myiframe').src = src;
+		}
+	</script>
+</body>
+</html>
