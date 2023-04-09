@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Web Page</title>
+	<title>BITS AI & ML Assignment</title>
 	<style>
+		body {
+			background-image: url('https://github.com/Karthik-BITS/BITS-Assignment-AIML/blob/main/background.jpg?raw=true');
+			background-size: cover;
+		}
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 60%;
+			max-height: 75%;
+		}
+		
 		iframe {
 			width: 100%;
 			height: 500px;
 			border: none;
+			margin-top: 20px;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: #fff;
+			border-radius: 5px;
+			text-decoration: none;
+			font-weight: bold;
+			margin-right: 10px;
+			margin-bottom: 10px;
 		}
 	</style>
 </head>
 <body>
-	<img src="https://github.com/Karthik-BITS/BITS-Assignment-AIML/blob/main/logo.png?raw=true, style="max-width: 60%; max-height: 75%;">
-	<h1>AI/ML Assignment</h1>
-	<a href="#" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_Logistic.ipynb')">Click here to view the Logistic Regression Algorithm Performance</a>
-	<a href="#" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_RandomForest.ipynb')">Click here to view the Random Forest Algorithm Performance</a>
+	<img src="https://github.com/Karthik-BITS/BITS-Assignment-AIML/blob/main/logo.png?raw=true">
+	<h1 style="text-align: center; color: #fff;">AI/ML Assignment</h1>
+	<a href="#" class="button" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_Logistic.ipynb')">Click here to view the Logistic Regression Algorithm Performance</a>
+	<a href="#" class="button" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_RandomForest.ipynb')">Click here to view the Random Forest Algorithm Performance</a>
 	<iframe id="myiframe" src=""></iframe>
 
 	<script>
