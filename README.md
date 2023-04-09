@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # BITS-Assignment-AIML
 
 The assignment is for the AI/ML
