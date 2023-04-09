@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AI & Ml Assignment</title>
+	<title>AI & ML Assignment</title>
 	<style>
 		body {
 			background-image: url('https://github.com/Karthik-BITS/BITS-Assignment-AIML/blob/main/background.jpg?raw=true');
@@ -23,6 +23,26 @@
 			border-radius: 10px;
 			margin-top: 50px;
 		}
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 9999;
+}
+
+.cursor.expand {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+
 
 		.button {
 			display: inline-block;
@@ -45,6 +65,29 @@
 		iframe.show {
 			display: block;
 		}
+
+		.glitter {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1px;
+			height: 1px;
+			background-color: #fff;
+			box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+			animation: glitter 5s linear infinite;
+		}
+
+		@keyframes glitter {
+			0% {
+				transform: translate(0, 0);
+				opacity: 1;
+			}
+
+			100% {
+				transform: translate(100vw, 100vh);
+				opacity: 0;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -53,8 +96,12 @@
 		<h1>AI/ML Assignment</h1>
 		<a href="#" class="button" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_Logistic.ipynb')">Click here to view the Logistic Regression Algorithm Performance</a>
 		<a href="#" class="button" onclick="changeFrameSource('https://nbviewer.org/github/Karthik-BITS/BITS-Assignment-AIML/blob/main/Assignment_AIML_UDAY_RandomForest.ipynb')">Click here to view the Random Forest Algorithm Performance</a>
+	
+
 		<iframe id="myiframe" src="" class="show"></iframe>
 	</div>
+<div class="cursor"></div>
+<script src="cursor.js"></script>
 
 	<script>
 		function changeFrameSource(src) {
